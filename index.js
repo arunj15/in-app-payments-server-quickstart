@@ -28,7 +28,7 @@ const ordersApi = new OrdersApi();
 const locationsApi = new LocationsApi();
 const customersApi = new CustomersApi();
 
-app.post('/chargeForCookie', async (request, response) => {
+app.post('/chargeForSWYMPoolEvent', async (request, response) => {
   const requestBody = request.body;
   const createOrderRequest = getOrderRequest();
 
@@ -120,10 +120,10 @@ function getOrderRequest() {
     order: {
       line_items: [
         {
-          name: "Cookie 🍪",
+          name: "SWYM pool event",
           quantity: "1",
           base_price_money: {
-            amount: 100,
+            amount: 4.99,
             currency: "USD"
           }
         }
